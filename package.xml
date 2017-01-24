@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>sdh_rviz_control_panel</name>
+  <version>1.0.0</version>
+  <description>RViz Plugin adding buttons to control the Schunk SDH hand via the UoE-modified SDH driver.</description>
+
+  <maintainer email="wolfgang.merkt@ed.ac.uk">Wolfgang Merkt</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/wxmerkt/sdh_rviz_control_panel</url>
+  <url type="bugtracker">https://github.com/wxmerkt/sdh_rviz_control_panel/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rviz</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_srvs</run_depend>
+
+  <export>
+    <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>

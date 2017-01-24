@@ -1,0 +1,9 @@
+<library path="lib/libSDHControlPanel">
+    <class name="sdh_rviz_control_panel/SDHControlPanel"
+           type="sdh_rviz_control_panel::SDHControlPanel"
+           base_class_type="rviz::Panel">
+        <description>
+            Control panel for Schunk SDH hand.
+        </description>
+    </class>
+</library>
