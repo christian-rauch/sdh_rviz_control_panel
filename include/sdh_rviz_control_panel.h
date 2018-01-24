@@ -39,9 +39,9 @@ class SDHControlPanel : public rviz::Panel {
   ros::ServiceClient srvEmergencyStop_ =
       nh.serviceClient<std_srvs::Trigger>("/gripper/sdh_controller/stop");
   ros::ServiceClient srvEngage_ =
-      nh.serviceClient<std_srvs::Trigger>("/gripper/sdh_controller/engage");
+      nh.serviceClient<std_srvs::Trigger>("/gripper/sdh_controller/motor_on");
   ros::ServiceClient srvDisengage_ =
-      nh.serviceClient<std_srvs::Trigger>("/gripper/sdh_controller/disengage");
+      nh.serviceClient<std_srvs::Trigger>("/gripper/sdh_controller/motor_off");
   ros::ServiceClient srvTactileClose_ = nh.serviceClient<std_srvs::Trigger>(
       "/gripper/sdh_controller/tactile_close");
   ros::ServiceClient srvTactileOpen_ = nh.serviceClient<std_srvs::Trigger>(
