@@ -3,23 +3,24 @@ project(sdh_rviz_control_panel)
 
 add_compile_options(-std=c++11)
 
-find_package(catkin REQUIRED)
-find_package(Qt4 REQUIRED COMPONENTS QtCore QtGui)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(catkin REQUIRED COMPONENTS rviz)
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
 
 catkin_package(
-	DEPENDS rviz
-    CATKIN_DEPENDS
+    CATKIN_DEPENDS rviz
     INCLUDE_DIRS # TODO include
     LIBRARIES # TODO
 )
 
-include(${QT_USE_FILE})
+include_directories(${catkin_INCLUDE_DIRS})
 include_directories(include/)
 
-qt4_wrap_cpp(QT_MOC include/sdh_rviz_control_panel.h)
-set(SOURCES src/sdh_rviz_control_panel.cpp ${QT_MOC})
-add_library(SDHControlPanel ${SOURCES})
-target_link_libraries(SDHControlPanel ${QT_LIBRARIES} ${catkin_LIBRARIES} ${rviz_DEFAULT_PLUGIN_LIBRARIES})
+add_library(SDHControlPanel src/sdh_rviz_control_panel.cpp)
+target_link_libraries(SDHControlPanel ${catkin_LIBRARIES} ${rviz_DEFAULT_PLUGIN_LIBRARIES} Qt5::Widgets)
 
 install(FILES plugin_description.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}

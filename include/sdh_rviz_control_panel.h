@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QtGui>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 #include <ros/ros.h>
 #include <rviz/panel.h>
