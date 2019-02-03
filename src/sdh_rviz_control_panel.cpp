@@ -7,8 +7,8 @@ SDHControlPanel::SDHControlPanel(QWidget* parent) : rviz::Panel(parent) {
 
   _btnInitialise = new QPushButton(tr("Initialise"));
   _btnEmergencyStop = new QPushButton(tr("Emergency Stop"));
-  _btnEngage = new QPushButton(tr("Engage"));
-  _btnDisengage = new QPushButton(tr("Disengage"));
+  _btnEngage = new QPushButton(tr("Motors ON"));
+  _btnDisengage = new QPushButton(tr("Motors OFF"));
   _btnTactileClose = new QPushButton(tr("Tactile Close"));
   _btnTactileOpen = new QPushButton(tr("Tactile Open"));
 
